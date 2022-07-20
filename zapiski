@@ -1,0 +1,40 @@
+biblioteki
+arhiv ot obekti
+syzdavane na biblioteka "stati4na"
+
+gcc -c ramdoms.c -o ramdoms.o
+ar - rcs librandlib.a ramdoms.o
+gcc begining.c -o program
+
+primer ot zada4a:
+prosta:
+gcc -c bitmask.c -o bitmask.o
+ar -rcs libsprogram.a bitmask.o
+gcc bitmask.c -o sprogram -L. -l sprogram
+./sprogram
+dinami4na:
+ gcc -c -fPIC bitmask.c -o bitmask.o
+ gcc -shared -o libdprogram.so bitmask.o
+ gcc bitmask.c -o dprogram -L. -l dprogram
+ echo $pwd
+
+dinami4na biblioteka
+
+gcc -c -fPIC dramdoms.c -o dramdoms.o
+gcc -shared -o libdrand.so dramdoms.o
+gcc begining.c -o program -L . -l drandlib
+
+//zada4a
+
+syzdai bitmask.c s headyr i test.c kydeto se zapisvat funkciite
+setbit,slearbit,flipbit
+checkbit
+
+sprogram-stati4na biblioteka
+dprogram-dinami4na biblioteka 
+
+
+
+$@- target name
+$<- first dep pyrvoto dependancy
+$^- all dep vsi4kite dependancy
